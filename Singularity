@@ -16,7 +16,19 @@ From: nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
     # which are useless now.
     rm -rf /var/lib/apt/lists/*
     # Install Python modules.
-    pip3 install torch numpy matplotlib
+    # pip3 install torch numpy matplotlib
+    pip3 install pipenv
+
+
+%environment
+    # Pipenv requires a certain terminal encoding.
+    export LANG=C.UTF-8
+    export LC_ALL=C.UTF-8
+    # This configures Pipenv to store the packages in the current working
+    # directory.
+    export PIPENV_VENV_IN_PROJECT=1
+
+
 
 
 
