@@ -14,6 +14,8 @@ From: nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
         python3-setuptools \
         python-dev \
         python3-dev \
+	python3-venv \
+        graphviz \
         vim \
         wget \
         gfortran
